@@ -19,7 +19,8 @@
             android:id="@+id/picture_one"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"/>
 
         <TextView
             android:id="@+id/name_one"
@@ -47,7 +48,8 @@
             android:id="@+id/picture_two"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"/>
 
         <TextView
             android:id="@+id/name_two"
@@ -74,7 +76,8 @@
             android:id="@+id/picture_three"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"/>
 
         <TextView
             android:id="@+id/name_three"
