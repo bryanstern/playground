@@ -216,10 +216,16 @@ public class MainActivity extends Activity {
                 return;
             }
 
+            Log.d(TAG, user.getLogin() + " " + user.getAvatarUrl());
+
             rowList.get(row).setVisibility(View.VISIBLE);
             nameViewList.get(row).setText(user.getLogin());
             Picasso.with(getActivity())
+                    .cancelRequest(picViewList.get(row));
+
+            Picasso.with(getActivity())
                     .load(user.getAvatarUrl())
+                    .noFade()
                     .into(picViewList.get(row));
         }
 
