@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -20,21 +21,22 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentLeft="true"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp" />
 
         <TextView
             android:id="@+id/name_one"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/picture_one"
-            android:layout_toLeftOf="@+id/close_one"/>
+            android:layout_toLeftOf="@+id/close_one"
+            android:layout_toRightOf="@+id/picture_one" />
 
-        <View
+        <Button
             android:id="@+id/close_one"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@android:color/black"
-            android:layout_alignParentRight="true"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/action_ignore" />
 
     </RelativeLayout>
 
@@ -49,21 +51,22 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentLeft="true"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp" />
 
         <TextView
             android:id="@+id/name_two"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/picture_two"
-            android:layout_toLeftOf="@+id/close_two"/>
+            android:layout_toLeftOf="@+id/close_two"
+            android:layout_toRightOf="@+id/picture_two" />
 
-        <View
+        <Button
             android:id="@+id/close_two"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@android:color/black"
-            android:layout_alignParentRight="true"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/action_ignore" />
 
     </RelativeLayout>
 
@@ -77,21 +80,22 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentLeft="true"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp" />
 
         <TextView
             android:id="@+id/name_three"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/picture_three"
-            android:layout_toLeftOf="@+id/close_three"/>
+            android:layout_toLeftOf="@+id/close_three"
+            android:layout_toRightOf="@+id/picture_three" />
 
-        <View
+        <Button
             android:id="@+id/close_three"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@android:color/black"
-            android:layout_alignParentRight="true"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/action_ignore" />
 
     </RelativeLayout>
 
