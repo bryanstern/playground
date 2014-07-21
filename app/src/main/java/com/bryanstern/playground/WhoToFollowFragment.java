@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,7 +42,7 @@ public class WhoToFollowFragment extends Fragment {
     List<ImageView> picViewList;
 
     @InjectViews({R.id.close_one, R.id.close_two, R.id.close_three})
-    List<View> closeViewList;
+    List<Button> closeViewList;
 
     GitHubService gitHubService;
     ConnectableObservable<List<GitHubUser>> responseStream;
@@ -122,8 +123,6 @@ public class WhoToFollowFragment extends Fragment {
     }
 
     private Observable<GitHubUser> createSuggestionStream(Observable<Object> closeClickStream) {
-        GitHubUser startWith = null;
-
         return Observable.combineLatest(
                 closeClickStream.startWith(new Object()),
                 responseStream,
@@ -133,7 +132,7 @@ public class WhoToFollowFragment extends Fragment {
                     return null;
                 })
                 .mergeWith(refreshClickStream.map(o -> null))
-                .startWith(startWith)
+                .startWith((GitHubUser) null)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
